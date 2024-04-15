@@ -1,8 +1,4 @@
 // Importing necessary modules and packages
-if(process.env.NODE_ENV !== 'production'){
-
-    require('dotenv').config()
-} 
 const express = require("express");
 const app = express();
 const userRoutes = require("./routes/user");
@@ -15,7 +11,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
-
+const dotenv = require("dotenv");
 
 // Setting up port number
 const PORT = process.env.PORT || 4000;
